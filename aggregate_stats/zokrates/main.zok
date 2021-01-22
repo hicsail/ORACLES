@@ -1,0 +1,10 @@
+def main() -> field:
+  field len = 0
+  field sum = 0
+  field[4] data = [1, 2, 3, 4]
+  for field i in 0..4 do
+    len = len +1
+    sum = sum + data[i]
+  endfor
+
+  return sum/len
