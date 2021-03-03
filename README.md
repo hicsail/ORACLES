@@ -77,6 +77,7 @@ Our goal is to convert legally, socially, or commercially relevant scenarios int
     cd bulletproofs
     cargo install --features yoloproofs --path .
     </pre>
+    <i>1/27/21 build failed</i>
   </td>
 </tr>
 <tr></tr>
@@ -93,3 +94,7 @@ Our goal is to convert legally, socially, or commercially relevant scenarios int
 </tr>
 
 </table>
+
+
+## Other Helpful Readings
+* [R1CS](http://www.zeroknowledgeblog.com/index.php/the-pinocchio-protocol/r1cs)

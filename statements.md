@@ -1,5 +1,17 @@
 ## Statements
 
+### [Verification Dilemmas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3781082)
+#### Government Algorithms
+Assert that a given value is the result of an algorithm on some given data as verification of the algorithm's *identity*, and that an algorithm behaves a certain way and not others as verfication of the algorithm's *characteristics*.
+* New York City Office of Chief Medical Examiner’s Forensic Statistical Tool - ensure that a software system does not undergo "sifnificant" or "core" changes after regulatory approval
+* IRS audit algorithm
+
+#### Trade Secret Litigation
+* Customer lists - utilize ZKP and MPC to find existance of a sizeable overlap in respective databases    
+* Computer programs - determine similarity in programs
+
+_________________
+
 ### Complexity: For Loops
 A single-table database D in which each row corresponds to a single person and each column corresponds to a feature about the person. The prover computes and publishes some analytic s = φ(D) of the dataset
 
