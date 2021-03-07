@@ -48,29 +48,76 @@ def createRawIncomePriceData():
     dataset.append(yearObj)
 
 
-    with open('rawNetPriceIncome.json', 'w') as ed_json: 
+    with open('../data/rawNetPriceIncome.json', 'w') as ed_json: 
         json.dump(dataset, ed_json, indent = 4)
 
-def hashJSON(): 
-    with open('rawNetPriceIncome.json', 'r') as ed_json: 
-        data= json.load(ed_json)
-        a = json.dumps(data)
-        hashedDb = sha256(a.encode('utf-8')).hexdigest()
-        with open("hashedNetPriceIncome.json", 'w') as hashed_json: 
-            json.dump(hashedDb, hashed_json)
-# hashJSON()
+def createOutcomeMeasures(): 
+    dataset = []
+    categories = [
+    "FULL-TIME, FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12", 
+    "PART-TIME, FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12", 
+    "FULL-TIME, NON-FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12",
+    "PART-TIME, NON-FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12"
+    ]
 
-
-# def createOutcomeMeasures(): 
-#     dataset = []
-#     categories = [
-#     "FULL-TIME, FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12", 
-#     "PART-TIME, FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12", 
-#     "FULL-TIME, NON-FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12",
-#     "PART-TIME, NON-FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12"
-#     ]
-
-#     for i in range(len(categories)): 
+    categoriesObj = {} 
+    for i in range(len(categories)): 
+        data = []
+        if i == 0: 
+            # Add Pell Grant Data
+            for j in range(100): 
+                if j < 84: 
+                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                if j >= 84 and j < 97 : 
+                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+            # Non-pell grant data 
+            for k in range(900):
+                if k < 792: 
+                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                if k >= 792 and k < 864: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+        elif i == 1: 
+            # Add Pell Grant Data
+            for j in range(100): 
+                if j < 50: 
+                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+            # Non-pell grant data 
+            for k in range(900):
+                if k < 300: 
+                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+        elif i==2: 
+            # Add Pell Grant Data
+            for j in range(100): 
+                if j < 87: 
+                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                if j >= 87 and j < 97: 
+                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+            # Non-pell grant data 
+            for k in range(900):
+                if k < 774: 
+                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                if k >= 774 and k < 846: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+        else: 
+            # Add Pell Grant Data
+            for j in range(100): 
+                if j < 56: 
+                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                if j >= 56 and j < 87: 
+                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+            # Non-pell grant data 
+            for k in range(900):
+                if k < 459: 
+                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                if k >= 459 and k < 630: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                if k >= 630 and k < 639: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 1, "Enrolled at different insitution": 0})
+        categoriesObj[categories[i]] = data
+    dataset.append(categoriesObj)
+    with open("../data/rawOutcomeMeasures.json", 'w') as outcome_json:
+        json.dump(dataset, outcome_json, indent=4)
+        
 
 
 def createDistanceEducationStatus():
@@ -83,21 +130,28 @@ def createDistanceEducationStatus():
         if i == 0: 
             undergradData = []
             for j in range(99): 
-                undergradData.append({"Enrolled in only distance education": False, "Enrolled in some distance education": False, "Not enrolled in any distance education": True})
-            undergradData.append({"Enrolled in only distance education": False, "Enrolled in some distance education": True, "Not enrolled in any distance education": False})
+                undergradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 0, "Not enrolled in any distance education": 1})
+            undergradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 1, "Not enrolled in any distance education": 0})
             categoriesObj[categories[i]] = undergradData
         else: 
             gradData = []
             for j in range(81): 
-                gradData.append({"Enrolled in only distance education": False, "Enrolled in some distance education": False, "Not enrolled in any distance education": True})
+                gradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 0, "Not enrolled in any distance education": 1})
             for k in range(14): 
-                gradData.append({"Enrolled in only distance education": True, "Enrolled in some distance education": False, "Not enrolled in any distance education": False})
+                gradData.append({"Enrolled in only distance education": 1, "Enrolled in some distance education": 0, "Not enrolled in any distance education": 0})
             for l in range(5): 
-                gradData.append({"Enrolled in only distance education": False, "Enrolled in some distance education": False, "Not enrolled in any distance education": True})
-            gradData.append({"Enrolled in only distance education": False, "Enrolled in some distance education": True, "Not enrolled in any distance education": False})
+                gradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 1, "Not enrolled in any distance education": 0})
+            gradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 1, "Not enrolled in any distance education": 0})
             categoriesObj[categories[i]] = gradData
     dataset.append(categoriesObj)
-    with open('rawDistanceEducation.json', 'w') as ed_json: 
+    with open('../data/rawDistanceEducation.json', 'w') as ed_json: 
         json.dump(dataset, ed_json, indent = 4)
 
-createDistanceEducationStatus()
+def hashJSON(currentFileName, hashedFileName): 
+    with open(currentFileName, 'r') as ed_json: 
+        data= json.load(ed_json)
+        a = json.dumps(data)
+        hashedDb = sha256(a.encode('utf-8')).hexdigest()
+        with open(hashedFileName, 'w') as hashed_json: 
+            json.dump(hashedDb, hashed_json)
+hashJSON("../data/rawOutcomeMeasures.json", "../data/hashedOutcomeMeasures.json")
