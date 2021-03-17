@@ -1,4 +1,8 @@
 ## Statements
+_________________
+### Research Data Integrity
+* The COVID-19 study that led to hydroxychloroquine clinical trials of being halted worldwide was [retracted](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31324-6/fulltext) after the underlying data could not be verified. *[New York Times](https://www.nytimes.com/2020/06/04/health/coronavirus-hydroxychloroquine.html)*
+_________________
 
 ### [Verification Dilemmas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3781082)
 #### Government Algorithms

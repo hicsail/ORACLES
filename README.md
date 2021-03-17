@@ -75,9 +75,9 @@ Our goal is to convert legally, socially, or commercially relevant scenarios int
     <pre lang="csharp">
     git clone https://github.com/QED-it/bulletproofs.git
     cd bulletproofs
-    cargo install --features yoloproofs --path .
+    cargo +nightly install --path .
     </pre>
-    <i>1/27/21 build failed</i>
+    <i>3/8/21 build success</i>
   </td>
 </tr>
 <tr></tr>
@@ -88,8 +88,9 @@ Our goal is to convert legally, socially, or commercially relevant scenarios int
     <pre lang="csharp">
     git clone https://github.com/QED-it/zkinterface-bellman.git
     cd zkinterface-bellman
-    cargo install --path .
+    cargo +nightly install --path .
     </pre>
+    <i>3/8/21 build success</i>
   </td>
 </tr>
 
