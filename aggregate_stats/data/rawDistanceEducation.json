@@ -1002,11 +1002,6 @@
                 "Enrolled in only distance education": 0,
                 "Enrolled in some distance education": 1,
                 "Not enrolled in any distance education": 0
-            },
-            {
-                "Enrolled in only distance education": 0,
-                "Enrolled in some distance education": 1,
-                "Not enrolled in any distance education": 0
             }
         ]
     }

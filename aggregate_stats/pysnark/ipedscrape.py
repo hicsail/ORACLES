@@ -65,54 +65,71 @@ def createOutcomeMeasures():
         data = []
         if i == 0: 
             # Add Pell Grant Data
-            for j in range(100): 
-                if j < 84: 
+            for j in range(10): 
+                if j < 8: 
                     data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
-                if j >= 84 and j < 97 : 
+                elif j >= 8 and j < 9 : 
                     data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                else: 
+                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
             # Non-pell grant data 
-            for k in range(900):
-                if k < 792: 
+            for k in range(90):
+                if k < 79: 
                     data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
-                if k >= 792 and k < 864: 
+                elif k >= 79 and k < 86: 
                     data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                else: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})                    
         elif i == 1: 
             # Add Pell Grant Data
-            for j in range(100): 
-                if j < 50: 
+            for j in range(10): 
+                if j < 5: 
                     data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                else: 
+                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
             # Non-pell grant data 
-            for k in range(900):
-                if k < 300: 
+            for k in range(90):
+                if k < 30: 
                     data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                else: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
         elif i==2: 
             # Add Pell Grant Data
-            for j in range(100): 
-                if j < 87: 
+            for j in range(10): 
+                if j < 8: 
                     data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
-                if j >= 87 and j < 97: 
+                elif j >= 8 and j < 9: 
                     data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                else: 
+                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
             # Non-pell grant data 
-            for k in range(900):
-                if k < 774: 
+            for k in range(90):
+                if k < 77: 
                     data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
-                if k >= 774 and k < 846: 
+                elif k >= 77 and k < 84: 
                     data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                else: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
         else: 
             # Add Pell Grant Data
-            for j in range(100): 
-                if j < 56: 
+            for j in range(10): 
+                if j < 5: 
                     data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
-                if j >= 56 and j < 87: 
+                elif j >= 5 and j < 8: 
                     data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                else: 
+                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+
             # Non-pell grant data 
-            for k in range(900):
-                if k < 459: 
+            for k in range(90):
+                if k < 45: 
                     data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
-                if k >= 459 and k < 630: 
+                elif k >= 45 and k < 63: 
                     data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
-                if k >= 630 and k < 639: 
+                elif k >= 63 and k < 63: 
                     data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 1, "Enrolled at different insitution": 0})
+                else: 
+                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
         categoriesObj[categories[i]] = data
     dataset.append(categoriesObj)
     with open("../data/rawOutcomeMeasures.json", 'w') as outcome_json:
@@ -141,11 +158,62 @@ def createDistanceEducationStatus():
                 gradData.append({"Enrolled in only distance education": 1, "Enrolled in some distance education": 0, "Not enrolled in any distance education": 0})
             for l in range(5): 
                 gradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 1, "Not enrolled in any distance education": 0})
-            gradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 1, "Not enrolled in any distance education": 0})
             categoriesObj[categories[i]] = gradData
     dataset.append(categoriesObj)
     with open('../data/rawDistanceEducation.json', 'w') as ed_json: 
         json.dump(dataset, ed_json, indent = 4)
+
+def createGraduationRateMeasures(): 
+    dataset = []
+    categories = ["4-year", "6-year", "8-year"]
+    categoriesObj = {}
+    for i in range(len(categories)): 
+        yearData = []
+        # handle 4-year case
+        if i == 0:             
+            # Began in 2011
+            for j in range(100): 
+                if j <= 80: 
+                    yearData.append({"Began": "2011", "Graduated": 1})
+                else: 
+                    yearData.append({"Began": "2011", "Graduated": 0})
+            # Began in 2013
+            for k in range(100): 
+                if k <= 83: 
+                    yearData.append({"Began": "2013", "Graduated": 1})
+                else: 
+                    yearData.append({"Began": "2013", "Graduated": 0})
+        elif i == 1:
+            # handle 6-year case
+            # Began in 2011
+            for j in range(100): 
+                if j <= 86: 
+                    yearData.append({"Began": "2011", "Graduated": 1})
+                else: 
+                    yearData.append({"Began": "2011", "Graduated": 0})
+            # Began in 2013
+            for k in range(100): 
+                if k < 88: 
+                    yearData.append({"Began": "2013", "Graduated": 1})
+                else: 
+                    yearData.append({"Began": "2013", "Graduated": 0})
+        else: 
+            # handle 8-year case
+            # Began in 2011
+            for j in range(100): 
+                if j < 88: 
+                    yearData.append({"Began": "2011", "Graduated": 1})
+                else: 
+                    yearData.append({"Began": "2011", "Graduated": 0})
+        categoriesObj[categories[i]] = yearData
+    dataset.append(categoriesObj)
+    with open('../data/rawGraduationRateMeasures.json', 'w') as ed_json: 
+        json.dump(dataset, ed_json, indent = 4)
+
+def covidCasesAge(): 
+    dataset = [{"0-19": 6, "20-29": 15, "30-39": 15, "40-49": 14, "50-59": 16, "60-69": 13, "70-79": 8, "80+": 13}]
+    with open("../data/rawCovidCasesByAge.json", 'w') as covid_json:
+        json.dump(dataset, covid_json, indent=4)
 
 def hashJSON(currentFileName, hashedFileName): 
     with open(currentFileName, 'r') as ed_json: 
@@ -154,4 +222,6 @@ def hashJSON(currentFileName, hashedFileName):
         hashedDb = sha256(a.encode('utf-8')).hexdigest()
         with open(hashedFileName, 'w') as hashed_json: 
             json.dump(hashedDb, hashed_json)
-hashJSON("../data/rawOutcomeMeasures.json", "../data/hashedOutcomeMeasures.json")
+
+createOutcomeMeasures()
+hashJSON('../data/rawOutcomeMeasures.json', '../data/hashedOutcomeMeasures.json')
