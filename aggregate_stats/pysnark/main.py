@@ -18,11 +18,10 @@ witness = [3.0, 3.4, 2.3, 4.0, 3.8, 2.6]
 print("The average of GPAs ", average_gpa(witness))
 # The average of GPAs  3.18
   
-# // Witness:  single table database (D) with columns representing the income years along with the seperate income brackets  
-# // Public knowledge: schema of D, constraint C that limits columns used
-# // Statement: the statistic s is computed as s = φ(D)
-# //            where the analysis φ involves data over at least N people within the dataset,
-# //            and it only uses each column in a manner that adheres to the constraint C
+# // Witness:  single table database (D) representing the income years, seperate income brackets, and each row in an income bracket representing the amount paid for that year
+# // Public knowledge: Public IPEDS Statistics that show the average net price per each income bracket
+# // Statement: the average net price paid is calculated over the data with at least N people within the dataset within each income bracket for each income year\
+# // 
 # //
 
 @snark
@@ -42,12 +41,17 @@ def average_paidPriceByIncome(incomeData):
         avg = sum/len
         data.append(avg)
     # array of average tuition paid for each of the five income income brackets in a year 
-    return avg
+    return data
 
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawNetPriceIncome.json', 'r') as data_json: 
     data = json.load(data_json)
 print("Average Price Paid per Income in 2016-2017 ", average_paidPriceByIncome(data))
 
+# // Witness:  multi-table table database (D) for undergraduate and graduate students representing if they were enrolled in any distance education
+# // Public knowledge: Public IPEDS Statistics that show the percentage of Undergraduate / Graduate students enrolled in distance education
+# // Statement: the average distance education is calculated over the data with at least N people within the dataset for undergraduate and graduate students
+# // 
+# //
 @snark 
 def average_distanceEducationStatus(distanceData):
     distanceObj = distanceData[0]
@@ -84,6 +88,15 @@ with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawDist
     data = json.load(data_json)
 print("Average Distance Education Status", average_distanceEducationStatus(data))
 
+# // Witness:  multi-table database (D) for full-time and part-time first-time degree seekers and full-time and part-time non-first-time degree seekers
+#              measuring whether they received their bachelor's degree when entering in 2011-2012
+# // Public knowledge: Public IPEDS Statistics that shows the percentages for each cohort, and seperates all students, students who received a Pell Grant, and students who
+# //                   did not receive a pell grant
+# // Statement: the average outcome measures are calculated over the data with at least N people within the dataset for all full-time first-time degree seekers, part-time 
+# //            first-time degree seekers, full-time non-first-time degree seekers, and part-time non-first-time degree seekers
+# // Limitations: PySnark's Fixed Point Value only stores 16 bits for integers, therefore for the computations of a large number of rows, we are unable to calculate the appropriate 
+#                 values, so we have scaled down the data in terms of 100 for each category (10 pell grant recipients and 90 non-pell grant students)
+# //
 @snark
 def average_outcomeMeasures(outcomeData): 
     dataCategories = outcomeData[0]
@@ -160,7 +173,14 @@ def average_outcomeMeasures(outcomeData):
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawOutcomeMeasures.json', 'r') as data_json: 
     data = json.load(data_json)
 print("Average Outcome Measures", average_outcomeMeasures(data))
-        
+
+# // Witness:  multi-table database (D) for students pursuing Bachelor's degrees, seperated by their enrollment in either a 4-year, 6-year, or 8-year program and whether they
+#              began in Fall 2011 or Fall 2013
+# // Public knowledge: Public IPEDS Statistics that shows the graduation rate percentages for all 4-year, 6-year, or 8-year program in Fall 2011 and Fall 2013
+# // Statement: the average degrees awarded are calculated over the entire dataset
+# // Limitations: PySnark's Fixed Point Value only stores 16 bits for integers, therefore for the computations of a large number of rows, we are unable to calculate the appropriate 
+#                 values, so we have scaled down the data in terms of 200 rows for each 4-year, 6-year, and 8-year program (100 students beginning in Fall 2011 and 100 who began in Fall 2013)
+# 
 @snark
 def degreesAwarded(data): 
     outcomes = data[0]
@@ -204,6 +224,12 @@ with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawGrad
     data = json.load(data_json)
 print("Average Graduation Rate Measures", degreesAwarded(data))
 
+# // Witness:  single table database (D) for COVID Cases in Massachusetts based on the following age ranges: "0-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80+"
+# // Public knowledge: Public IPEDS Statistics that shows the raw total cases for each age range
+# // Statement: Percentage of total COVID Cases in MA attributed to an age-group is calculated over the entire dataset
+# // Limitations: PySnark's Fixed Point Value only stores 16 bits for integers, therefore for the computations of a large number of rows, we are unable to calculate the appropriate 
+#                 values, so we have scaled down the data so that the sum of all the age ranges is 100 and we scaled each age-range's number of cases proportional to 100.
+# 
 @snark
 def covidCasesByAge(data):
     covidData = data[0]
