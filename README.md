@@ -1,9 +1,9 @@
 # Zero-Knowledge Proofs (ZKPs)
-This repo contains code for the SIEVE/Oracle project (TA1).
+This repo contains code for the SIEVE/ORACLES project (TA1).
 
 ZKPs allow data to be verified without revealing that data. For an overview of how they work, see articles under ["What is a zero-knowledge proof?"](https://zkp.science/)
 
-Our goal is to convert legally, socially, or commercially relevant scenarios into statements and generate constraint systems in an Assembly-like language that conforms to a previously agreed upon standard. Two platforms facilitate the interoperability of "frontend" (ie constraint generators) and "backend" (ie prover/verifier) libraries: zkinterface and wiztoolkit.
+Our goal is to map legally, socially, or commercially relevant scenarios into intermedite representation (IR) that can be proved in zero-knowledge. Two platforms facilitate the interoperability of "frontend" (ie constraint generators) and "backend" (ie prover/verifier) libraries: zkinterface and wiztoolkit.
 
 ## [WizToolKit](https://github.mit.edu/sieve-all/wiztoolkit)
 *Repos only available on the MIT Github and not accessible to the general public.*
@@ -38,26 +38,19 @@ Our goal is to convert legally, socially, or commercially relevant scenarios int
   <td><a href="https://github.com/meilof/pysnark">pySNARK</a></td>
   <td>
     <pre lang="csharp">
-    pip install git+https://github.com/meilof/pysnark <br>
-    pip install flatbuffers <br>
-    PYSNARK_BACKEND=zkinterface python aggregate_stats/pysnark/main.py
+    $ pip install git+https://github.com/meilof/pysnark
+    $ pip install flatbuffers
+    $ PYSNARK_BACKEND=zkinterface python aggregate_stats/pysnark/main.py
     </pre>
-    This will generate a `computation.zkif` file containing the R1CS. To view the file, make sure you've installed Rust nightly (and Cargo) and have clone the
+    This will generate a <code>computation.zkif</code> file containing the R1CS. To view the file, make sure you've installed Rust nightly (and Cargo) and have clone the
     <a href="https://github.com/QED-it/zkinterface">zkinterface</a> library  
     <pre>
-    cd zkinterface/rust/
-    cargo run explain path/to/computation.zkif
+    $ cd zkinterface/rust/
+    $ cargo run explain path/to/computation.zkif
     </pre>
   </td>
 </tr>
 <tr></tr>
-
-<tr>
-  <td><a href="https://github.com/scipr-lab/libsnark">Libsnark</a></td>
-  <td>
-  1)  MacOS: add <code> brew install cmake </code> <br>  
-  </td>
-</tr>
 
 </table>
 
@@ -73,9 +66,17 @@ Our goal is to convert legally, socially, or commercially relevant scenarios int
   <td><a href="">Bulletproof</a></td>
   <td>
     <pre lang="csharp">
-    git clone https://github.com/QED-it/bulletproofs.git
-    cd bulletproofs
-    cargo install --features yoloproofs --path .
+    $ git clone https://github.com/QED-it/bulletproofs.git
+    $ cd bulletproofs
+    $ cargo +nightly install --path .
+    </pre>
+    <i>3/8/21 build success</i><br><br>  
+    Make sure that the modulus in <code>main.py</code> is set correctly to the one required by Bulletproofs before generating the  <code>computation.zkif</code> file <br><br>
+    <pre lang="csharp">
+      $ zkif_bulletproofs prove < computation.zkif
+      Saved proof into bulletproofs-proof
+      $ zkif_bulletproofs verify < computation.zkif
+      Verifying proof in bulletproofs-proof
     </pre>
   </td>
 </tr>
@@ -85,11 +86,24 @@ Our goal is to convert legally, socially, or commercially relevant scenarios int
   <td><a href="https://docs.rs/bellman/0.8.0/bellman/">Bellman</a></td>
   <td>
     <pre lang="csharp">
-    git clone https://github.com/QED-it/zkinterface-bellman.git
-    cd zkinterface-bellman
-    cargo install --path .
+    $ git clone https://github.com/QED-it/zkinterface-bellman.git
+    $ cd zkinterface-bellman
+    $ cargo +nightly install --path .
+    </pre>
+    <i>3/8/21 build success</i><br><br>  
+    Make sure that the modulus in <code>main.py</code> is set correctly to the one required by Bellman before generating the  <code>computation.zkif</code> file
+    <br><br>
+    <pre lang="csharp">
+      $ zkif_bellman setup < computation.zkif
+      $ zkif_bellman prove < computation.zkif
+      $ zkif_bellman verify < computation.zkif
+      The proof is valid.
     </pre>
   </td>
 </tr>
 
 </table>
+
+
+## Other Helpful Readings
+* [R1CS](http://www.zeroknowledgeblog.com/index.php/the-pinocchio-protocol/r1cs)

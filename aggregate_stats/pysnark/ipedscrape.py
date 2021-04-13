@@ -67,69 +67,69 @@ def createOutcomeMeasures():
             # Add Pell Grant Data
             for j in range(10): 
                 if j < 8: 
-                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 elif j >= 8 and j < 9 : 
-                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
                 else: 
-                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
             # Non-pell grant data 
             for k in range(90):
                 if k < 79: 
-                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 elif k >= 79 and k < 86: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
                 else: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})                    
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})                    
         elif i == 1: 
             # Add Pell Grant Data
             for j in range(10): 
                 if j < 5: 
-                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 else: 
-                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
             # Non-pell grant data 
             for k in range(90):
                 if k < 30: 
-                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 else: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
         elif i==2: 
             # Add Pell Grant Data
             for j in range(10): 
                 if j < 8: 
-                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 elif j >= 8 and j < 9: 
-                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
                 else: 
-                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
             # Non-pell grant data 
             for k in range(90):
                 if k < 77: 
-                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 elif k >= 77 and k < 84: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
                 else: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
         else: 
             # Add Pell Grant Data
             for j in range(10): 
                 if j < 5: 
-                    data.append({"Pell": 1, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 elif j >= 5 and j < 8: 
-                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
                 else: 
-                    data.append({"Pell": 1, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
 
             # Non-pell grant data 
             for k in range(90):
                 if k < 45: 
-                    data.append({"Pell": 0, "Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 1, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
                 elif k >= 45 and k < 63: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 1})
                 elif k >= 63 and k < 63: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 1, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 1, "Enrolled at different insitution": 0})
                 else: 
-                    data.append({"Pell": 0, "Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
+                    data.append({"Received Bachelor's": 0, "Enrolled at same insitution": 0, "Enrolled at different insitution": 0})
         categoriesObj[categories[i]] = data
     dataset.append(categoriesObj)
     with open("../data/rawOutcomeMeasures.json", 'w') as outcome_json:

@@ -1,6 +1,13 @@
 from pysnark.runtime import snark, PrivVal
 from pysnark.fixedpoint import PrivValFxp
+import pysnark.zkinterface.backend
 import json
+
+# set modulus specific to Dalek Bulletproof
+#pysnark.zkinterface.backend.set_modulus(7237005577332262213973186563042994240857116359379907606001950938285454250989)
+
+# modulus specific to Bellman
+pysnark.zkinterface.backend.set_modulus(52435875175126190479447740508185965837690552500527637822603658699938581184513)
 
 @snark
 def average_gpa(gpas):
@@ -27,25 +34,20 @@ print("The average of GPAs ", average_gpa(witness))
 @snark
 def average_paidPriceByIncome(incomeData):
     #  Begin with just 2016-2017
-    yearData = incomeData[0]["2016-2017"]
     data = []
-    avg = PrivValFxp(0)
-    for income in yearData: 
-        incomeBracket = yearData[income]
-        private_data = map(PrivValFxp, incomeBracket)
+    for income in incomeData[0]["2016-2017"]: 
+        private_data = map(PrivValFxp, incomeData[0]["2016-2017"][income])
         sum = PrivValFxp(0)
         len = PrivVal(0)
         for val in private_data: 
             sum = sum + val
             len = len + 1
-        avg = sum/len
-        data.append(avg)
+        data.append(sum/len)
     # array of average tuition paid for each of the five income income brackets in a year 
     return data
 
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawNetPriceIncome.json', 'r') as data_json: 
-    data = json.load(data_json)
-print("Average Price Paid per Income in 2016-2017 ", average_paidPriceByIncome(data))
+    print("Average Price Paid per Income in 2016-2017 ", average_paidPriceByIncome(json.load(data_json)))
 
 # // Witness:  multi-table table database (D) for undergraduate and graduate students representing if they were enrolled in any distance education
 # // Public knowledge: Public IPEDS Statistics that show the percentage of Undergraduate / Graduate students enrolled in distance education
@@ -118,16 +120,14 @@ def average_outcomeMeasures(outcomeData):
         receivedBachelorsPell = PrivValFxp(0)
         differentInstitutionPell = PrivValFxp(0)
         sameInstitutionPell = PrivValFxp(0)
-        pellLen = PrivVal(0)
+        pellLen = PrivVal(1)
         count = 0
         for val in privatePellData: 
-            # Count: 1 - Received Bachelor's; 2 - Enrolled at same institution; 3 - Enrolled at different institution
+            # Count: 0 - Received Bachelor's; 1 - Enrolled at same institution; 2 - Enrolled at different institution
             if count == 0: 
-                count += 1
-            elif count == 1: 
                 receivedBachelorsPell = receivedBachelorsPell + val
                 count += 1
-            elif count == 2: 
+            elif count == 1: 
                 sameInstitutionPell = sameInstitutionPell + val
                 count += 1
             else: 
@@ -140,13 +140,11 @@ def average_outcomeMeasures(outcomeData):
         nonPellLen = PrivValFxp(0)
         count = 0
         for val in privateNonPellData: 
-            # Count: 1 - Received Bachelor's; 2 - Enrolled at same institution; 3 - Enrolled at different institution
+            # Count: 0 - Received Bachelor's; 1 - Enrolled at same institution; 2 - Enrolled at different institution
             if count == 0: 
-                count += 1
-            elif count == 1: 
                 receivedBachelorsNonPell = receivedBachelorsNonPell + val
                 count += 1
-            elif count == 2: 
+            elif count == 1: 
                 sameInstitutionNonPell = sameInstitutionNonPell + val
                 count += 1
             else: 
@@ -184,10 +182,9 @@ print("Average Outcome Measures", average_outcomeMeasures(data))
 @snark
 def degreesAwarded(data): 
     outcomes = data[0]
-    totalDegreesAwarded = PrivVal(0)
+    # totalDegreesAwarded = PrivVal(0)
     categoryObj = {}
     for category in outcomes: 
-
         yearData = outcomes[category]
         # Need to take our array of objects and convert it into two arrays for began in 2011 and began in 2013 and privatize those values 
         arr1 = []
@@ -202,34 +199,27 @@ def degreesAwarded(data):
 
         graduated1 = PrivValFxp(0)
         graduated2 = PrivValFxp(0)
-        length1 = PrivVal(0)
-        length2 = PrivVal(0)
+        length1 = PrivVal(1)
+        length2 = PrivVal(1)
         for val in privateArr1:
             graduated1 = graduated1 + val
             length1 = length1 + 1
         for val in privateArr2: 
             graduated2 = graduated2 + val
             length2 = length2 + 1
-        if len(arr2) == 0: 
-            length2 = length1
-        if category == "8-year":
-            totalDegreesAwarded = totalDegreesAwarded + graduated1
-        if category == "6-year": 
-            totalDegreesAwarded = totalDegreesAwarded + graduated2
         categoryObj[category] = {"Began in 2011": graduated1 / length1, "Began in 2013": graduated2 / length2}
-    categoryObj["Degrees Awarded in 2020"] = totalDegreesAwarded
     return categoryObj 
 
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawGraduationRateMeasures.json', 'r') as data_json: 
     data = json.load(data_json)
 print("Average Graduation Rate Measures", degreesAwarded(data))
 
-# // Witness:  single table database (D) for COVID Cases in Massachusetts based on the following age ranges: "0-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80+"
-# // Public knowledge: Public IPEDS Statistics that shows the raw total cases for each age range
-# // Statement: Percentage of total COVID Cases in MA attributed to an age-group is calculated over the entire dataset
-# // Limitations: PySnark's Fixed Point Value only stores 16 bits for integers, therefore for the computations of a large number of rows, we are unable to calculate the appropriate 
-#                 values, so we have scaled down the data so that the sum of all the age ranges is 100 and we scaled each age-range's number of cases proportional to 100.
-# 
+# # // Witness:  single table database (D) for COVID Cases in Massachusetts based on the following age ranges: "0-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80+"
+# # // Public knowledge: Public IPEDS Statistics that shows the raw total cases for each age range
+# # // Statement: Percentage of total COVID Cases in MA attributed to an age-group is calculated over the entire dataset
+# # // Limitations: PySnark's Fixed Point Value only stores 16 bits for integers, therefore for the computations of a large number of rows, we are unable to calculate the appropriate 
+# #                 values, so we have scaled down the data so that the sum of all the age ranges is 100 and we scaled each age-range's number of cases proportional to 100.
+# # 
 @snark
 def covidCasesByAge(data):
     covidData = data[0]
