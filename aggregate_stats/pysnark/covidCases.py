@@ -1,6 +1,7 @@
 from pysnark.runtime import snark, PrivVal
 from pysnark.fixedpoint import PrivValFxp
 import pysnark.zkinterface.backend
+from hashlib import sha256
 import json
 
 # set modulus specific to Dalek Bulletproof
@@ -16,7 +17,7 @@ pysnark.zkinterface.backend.set_modulus(5243587517512619047944774050818596583769
 # #                 values, so we have scaled down the data so that the sum of all the age ranges is 100 and we scaled each age-range's number of cases proportional to 100.
 # # 
 @snark
-def covidCasesByAge(data):
+def covidCasesByAge(data, hashedData):
     covidData = data[0]
     arr = []
     sumArr = []
@@ -33,8 +34,10 @@ def covidCasesByAge(data):
         sumArr[i] = sumArr[i] / sum
     for j in range(len(categories)):
         retObj[categories[j]] = sumArr[j]
-    return retObj 
+    commitment = sha256(json.dumps(data).encode('utf-8')).hexdigest()
+    if (commitment == hashedData):
+        return retObj 
 
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawCovidCasesByAge.json', 'r') as data_json: 
-    data = json.load(data_json)
-print("Average Covid Cases by Age Measures in MA", covidCasesByAge(data))
+    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedCovidCasesByAge.json', 'r') as hashedData: 
+        print("Average Covid Cases by Age Measures in MA", covidCasesByAge(json.load(data_json), json.load(hashedData)))

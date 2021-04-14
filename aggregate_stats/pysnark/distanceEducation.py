@@ -1,6 +1,7 @@
 from pysnark.runtime import snark, PrivVal
 from pysnark.fixedpoint import PrivValFxp
 import pysnark.zkinterface.backend
+from hashlib import sha256
 import json
 
 # set modulus specific to Dalek Bulletproof
@@ -15,7 +16,7 @@ pysnark.zkinterface.backend.set_modulus(5243587517512619047944774050818596583769
 # // 
 # //
 @snark 
-def average_distanceEducationStatus(distanceData):
+def average_distanceEducationStatus(distanceData, hashedData):
     distanceObj = distanceData[0]
     ret = []
     for val in distanceObj: 
@@ -45,7 +46,10 @@ def average_distanceEducationStatus(distanceData):
                 count = 0
                 len = len + 1
         ret.append({"Only Distance Education": onlyDistance / len, "Some Distance": someDistance / len, "No Distance": noDistance / len})
-    return ret 
+    commitment = sha256(json.dumps(distanceData).encode('utf-8')).hexdigest()
+    if (commitment == hashedData):
+        return ret
+
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawDistanceEducation.json', 'r') as data_json: 
-    data = json.load(data_json)
-print("Average Distance Education Status", average_distanceEducationStatus(data))
+    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedDistanceEducation.json', 'r') as hashedData: 
+        print("Average Distance Education Status", average_distanceEducationStatus(json.load(data_json), json.load(hashedData)))

@@ -1,6 +1,7 @@
 from pysnark.runtime import snark, PrivVal
 from pysnark.fixedpoint import PrivValFxp
 import pysnark.zkinterface.backend
+from hashlib import sha256
 import json
 
 # set modulus specific to Dalek Bulletproof
@@ -17,7 +18,7 @@ pysnark.zkinterface.backend.set_modulus(5243587517512619047944774050818596583769
 #                 values, so we have scaled down the data in terms of 200 rows for each 4-year, 6-year, and 8-year program (100 students beginning in Fall 2011 and 100 who began in Fall 2013)
 # 
 @snark
-def degreesAwarded(data): 
+def degreesAwarded(data, hashedData): 
     outcomes = data[0]
     # totalDegreesAwarded = PrivVal(0)
     categoryObj = {}
@@ -45,8 +46,10 @@ def degreesAwarded(data):
             graduated2 = graduated2 + val
             length2 = length2 + 1
         categoryObj[category] = {"Began in 2011": graduated1 / length1, "Began in 2013": graduated2 / length2}
-    return categoryObj 
+    commitment = sha256(json.dumps(data).encode('utf-8')).hexdigest()
+    if (commitment == hashedData):
+        return categoryObj 
 
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawGraduationRateMeasures.json', 'r') as data_json: 
-    data = json.load(data_json)
-print("Average Graduation Rate Measures", degreesAwarded(data))
+    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedGraduationRateMeasures.json', 'r') as hashedData: 
+        print("Average Graduation Rate Measures", degreesAwarded(json.load(data_json), json.load(hashedData)))

@@ -1,6 +1,7 @@
 from pysnark.runtime import snark, PrivVal
 from pysnark.fixedpoint import PrivValFxp
 import pysnark.zkinterface.backend
+from hashlib import sha256
 import json
 
 # set modulus specific to Dalek Bulletproof
@@ -20,7 +21,7 @@ pysnark.zkinterface.backend.set_modulus(5243587517512619047944774050818596583769
 #                 values, so we have scaled down the data in terms of 100 for each category (10 pell grant recipients and 90 non-pell grant students)
 # //
 @snark
-def average_outcomeMeasures(outcomeData): 
+def average_outcomeMeasures(outcomeData, hashedData): 
     dataCategories = outcomeData[0]
     categoryObj = {}
     for category in dataCategories: 
@@ -87,7 +88,10 @@ def average_outcomeMeasures(outcomeData):
                 "Enrolled at same institution": (sameInstitutionPell + sameInstitutionNonPell) / (pellLen + nonPellLen), 
                 "Enrolled at different insitution": (differentInstitutionPell + differentInstitutionNonPell )/ (pellLen + nonPellLen)
             }}
-    return categoryObj
+    commitment = sha256(json.dumps(outcomeData).encode('utf-8')).hexdigest()
+    if (commitment == hashedData):
+        return categoryObj
+
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawOutcomeMeasures.json', 'r') as data_json: 
-    data = json.load(data_json)
-print("Average Outcome Measures", average_outcomeMeasures(data))
+    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedOutcomeMeasures.json', 'r') as hashedData: 
+        print("Average Outcome Measures", average_outcomeMeasures(json.load(data_json), json.load(hashedData)))

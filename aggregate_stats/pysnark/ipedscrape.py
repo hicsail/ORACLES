@@ -222,6 +222,3 @@ def hashJSON(currentFileName, hashedFileName):
         hashedDb = sha256(a.encode('utf-8')).hexdigest()
         with open(hashedFileName, 'w') as hashed_json: 
             json.dump(hashedDb, hashed_json)
-
-createOutcomeMeasures()
-hashJSON('../data/rawOutcomeMeasures.json', '../data/hashedOutcomeMeasures.json')

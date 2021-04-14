@@ -1,6 +1,7 @@
 from pysnark.runtime import snark, PrivVal
 from pysnark.fixedpoint import PrivValFxp
 import pysnark.zkinterface.backend
+from hashlib import sha256
 import json
 
 # set modulus specific to Dalek Bulletproof
@@ -12,12 +13,12 @@ pysnark.zkinterface.backend.set_modulus(5243587517512619047944774050818596583769
 
 # // Witness:  single table database (D) representing the income years, seperate income brackets, and each row in an income bracket representing the amount paid for that year
 # // Public knowledge: Public IPEDS Statistics that show the average net price per each income bracket
-# // Statement: the average net price paid is calculated over the data with at least N people within the dataset within each income bracket for each income year\
+# // Statement: the average net price paid is calculated over the data with at least N people within the dataset within each income bracket for each income year
 # // 
 # //
 
 @snark
-def average_paidPriceByIncome(incomeData):
+def average_paidPriceByIncome(incomeData, hashedData):
     #  Begin with just 2016-2017
     data = []
     for income in incomeData[0]["2016-2017"]: 
@@ -28,8 +29,11 @@ def average_paidPriceByIncome(incomeData):
             sum = sum + val
             len = len + 1
         data.append(sum/len)
-    # array of average tuition paid for each of the five income income brackets in a year 
-    return data
+    commitment = sha256(json.dumps(incomeData).encode('utf-8')).hexdigest()
+    if (commitment == hashedData):
+        # array of average tuition paid for each of the five income income brackets in a year 
+        return data
 
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawNetPriceIncome.json', 'r') as data_json: 
-    print("Average Price Paid per Income in 2016-2017 ", average_paidPriceByIncome(json.load(data_json)))
+    with open ('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedNetPriceIncome.json', 'r') as hashed_data:
+        print("Average Price Paid per Income in 2016-2017 ", average_paidPriceByIncome(json.load(data_json), json.load(hashed_data)))
