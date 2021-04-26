@@ -34,6 +34,5 @@ def average_paidPriceByIncome(incomeData, hashedData):
         # array of average tuition paid for each of the five income income brackets in a year 
         return data
 
-with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawNetPriceIncome.json', 'r') as data_json: 
-    with open ('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedNetPriceIncome.json', 'r') as hashed_data:
-        print("Average Price Paid per Income in 2016-2017 ", average_paidPriceByIncome(json.load(data_json), json.load(hashed_data)))
+with open('../data/rawNetPriceIncome.json', 'r') as data_json, open ('../data/hashedNetPriceIncome.json', 'r') as hashed_data:
+    print("Average Price Paid per Income in 2016-2017", average_paidPriceByIncome(json.load(data_json), json.load(hashed_data)))

@@ -50,6 +50,6 @@ def degreesAwarded(data, hashedData):
     if (commitment == hashedData):
         return categoryObj 
 
-with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawGraduationRateMeasures.json', 'r') as data_json: 
-    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedGraduationRateMeasures.json', 'r') as hashedData: 
-        print("Average Graduation Rate Measures", degreesAwarded(json.load(data_json), json.load(hashedData)))
+with open('../data/rawGraduationRateMeasures.json', 'r') as data_json, \
+        open('../data/hashedGraduationRateMeasures.json', 'r') as hashedData: 
+    print("Average Graduation Rate Measures", degreesAwarded(json.load(data_json), json.load(hashedData)))

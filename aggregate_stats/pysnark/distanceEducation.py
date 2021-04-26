@@ -76,7 +76,7 @@ def average_distanceEducationStatus(distanceData, lfaData, hashedData):
     if (commitment == hashedData):
         return ret
 
-with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawDistanceEducation.json', 'r') as data_json: 
-    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawDistanceEducation.json', 'r') as lfa_data:
-        with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedDistanceEducation.json', 'r') as hashedData: 
-            print("Average Distance Education Status", average_distanceEducationStatus(json.load(data_json), json.load(lfa_data), json.load(hashedData)))
+with open('../data/rawDistanceEducation.json', 'r') as data_json, \
+    open('../data/rawDistanceEducation.json', 'r') as lfa_data, \
+    open('../data/hashedDistanceEducation.json', 'r') as hashedData: 
+        print("Average Distance Education Status", average_distanceEducationStatus(json.load(data_json), json.load(lfa_data), json.load(hashedData)))

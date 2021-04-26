@@ -38,6 +38,5 @@ def covidCasesByAge(data, hashedData):
     if (commitment == hashedData):
         return retObj 
 
-with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawCovidCasesByAge.json', 'r') as data_json: 
-    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedCovidCasesByAge.json', 'r') as hashedData: 
-        print("Average Covid Cases by Age Measures in MA", covidCasesByAge(json.load(data_json), json.load(hashedData)))
+with open('../data/rawCovidCasesByAge.json', 'r') as data_json, open('../data/hashedCovidCasesByAge.json', 'r') as hashedData: 
+    print("Average Covid Cases by Age Measures in MA", covidCasesByAge(json.load(data_json), json.load(hashedData)))

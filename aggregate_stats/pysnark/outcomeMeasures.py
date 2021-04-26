@@ -92,6 +92,5 @@ def average_outcomeMeasures(outcomeData, hashedData):
     if (commitment == hashedData):
         return categoryObj
 
-with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawOutcomeMeasures.json', 'r') as data_json: 
-    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedOutcomeMeasures.json', 'r') as hashedData: 
-        print("Average Outcome Measures", average_outcomeMeasures(json.load(data_json), json.load(hashedData)))
+with open('../data/rawOutcomeMeasures.json', 'r') as data_json, open('../data/hashedOutcomeMeasures.json', 'r') as hashedData: 
+    print("Average Outcome Measures", average_outcomeMeasures(json.load(data_json), json.load(hashedData)))
