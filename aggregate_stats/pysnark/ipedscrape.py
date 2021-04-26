@@ -163,6 +163,33 @@ def createDistanceEducationStatus():
     with open('../data/rawDistanceEducation.json', 'w') as ed_json: 
         json.dump(dataset, ed_json, indent = 4)
 
+def distanceLFA():
+    dataset = []
+    categories = ["UNDERGRADUATE DISTANCE EDUCATION STATUS", "GRADUATE DISTANCE EDUCATION STATUS"]
+    categoriesObj = {} 
+    for i in range(len(categories)):
+        # handle undegrad distance case
+        if i == 0: 
+            undergradData = []
+            for j in range(70): 
+                undergradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 0, "Not enrolled in any distance education": 1})
+            for m in range(30): 
+                undergradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 1, "Not enrolled in any distance education": 0})
+            categoriesObj[categories[i]] = undergradData
+        else: 
+            gradData = []
+            for j in range(70): 
+                gradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 0, "Not enrolled in any distance education": 1})
+            for k in range(20): 
+                gradData.append({"Enrolled in only distance education": 1, "Enrolled in some distance education": 0, "Not enrolled in any distance education": 0})
+            for l in range(10): 
+                gradData.append({"Enrolled in only distance education": 0, "Enrolled in some distance education": 1, "Not enrolled in any distance education": 0})
+            categoriesObj[categories[i]] = gradData
+    dataset.append(categoriesObj)
+    with open('../data/rawLFADistanceEducation.json', 'w') as ed_json: 
+        json.dump(dataset, ed_json, indent = 4) 
+
+
 def createGraduationRateMeasures(): 
     dataset = []
     categories = ["4-year", "6-year", "8-year"]
@@ -222,3 +249,6 @@ def hashJSON(currentFileName, hashedFileName):
         hashedDb = sha256(a.encode('utf-8')).hexdigest()
         with open(hashedFileName, 'w') as hashed_json: 
             json.dump(hashedDb, hashed_json)
+
+distanceLFA()
+hashJSON("../data/rawLFADistanceEducation.json", "../data/hashedLFADistanceEducation.json")

@@ -16,17 +16,24 @@ pysnark.zkinterface.backend.set_modulus(5243587517512619047944774050818596583769
 # // 
 # //
 @snark 
-def average_distanceEducationStatus(distanceData, hashedData):
+def average_distanceEducationStatus(distanceData, lfaData, hashedData):
     distanceObj = distanceData[0]
-    ret = []
+    lfaObj = lfaData[0]
+    ret = {}
     for val in distanceObj: 
         specificData = distanceObj[val]
+        lfa = lfaObj[val]
         # need to map our specific data for undergrad / grad into a private data
         toPrivatize = []
+        lfaPrivatize = []
         for data in specificData: 
             for key in data: 
                 toPrivatize.append(data[key])
+        for data in lfa: 
+            for key in data: 
+                lfaPrivatize.append(data[key])
         private_data = map(PrivVal, toPrivatize)
+        private_lfa = map(PrivVal, lfaPrivatize)
         onlyDistance = PrivValFxp(0)
         someDistance = PrivValFxp(0)
         noDistance = PrivValFxp(0)
@@ -45,11 +52,31 @@ def average_distanceEducationStatus(distanceData, hashedData):
                 noDistance = noDistance + val
                 count = 0
                 len = len + 1
-        ret.append({"Only Distance Education": onlyDistance / len, "Some Distance": someDistance / len, "No Distance": noDistance / len})
+        ret["Pre-COVID"] = {"Only Distance Education": onlyDistance / len, "Some Distance": someDistance / len, "No Distance": noDistance / len}        
+        
+        onlyDistanceLFA = PrivValFxp(0)
+        someDistanceLFA = PrivValFxp(0)
+        noDistanceLFA = PrivValFxp(0)
+        lenLFA = PrivVal(0)
+        countLFA = 0
+        for val in private_lfa:
+        # Count: 0 - Only Distance; 1 - Some Distance; 2 - No Distance
+            if countLFA == 0: 
+                onlyDistanceLFA = onlyDistanceLFA + val
+                countLFA += 1
+            elif countLFA == 1: 
+                someDistanceLFA = someDistanceLFA + val
+                countLFA += 1
+            else: 
+                noDistanceLFA = noDistanceLFA + val
+                countLFA = 0
+                lenLFA = lenLFA + 1
+        ret["COVID"] = {"Only Distance Education": onlyDistanceLFA / lenLFA, "Some Distance": someDistanceLFA / lenLFA, "No Distance": noDistanceLFA / lenLFA}        
     commitment = sha256(json.dumps(distanceData).encode('utf-8')).hexdigest()
     if (commitment == hashedData):
         return ret
 
 with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawDistanceEducation.json', 'r') as data_json: 
-    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedDistanceEducation.json', 'r') as hashedData: 
-        print("Average Distance Education Status", average_distanceEducationStatus(json.load(data_json), json.load(hashedData)))
+    with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/rawDistanceEducation.json', 'r') as lfa_data:
+        with open('/Users/gagandeepkang/Desktop/SAIL/oracle/aggregate_stats/data/hashedDistanceEducation.json', 'r') as hashedData: 
+            print("Average Distance Education Status", average_distanceEducationStatus(json.load(data_json), json.load(lfa_data), json.load(hashedData)))
