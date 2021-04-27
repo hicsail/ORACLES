@@ -1,0 +1,12 @@
+{
+    "Pre-COVID": {
+        "Only Distance Education": 0.0703125,
+        "Some Distance": 0.03125,
+        "No Distance": 0.8984375
+    },
+    "Post-COVID": {
+        "Only Distance Education": 0.0703125,
+        "Some Distance": 0.03125,
+        "No Distance": 0.8984375
+    }
+}
