@@ -1,109 +1,151 @@
-# Zero-Knowledge Proofs (ZKPs)
-This repo contains code for the SIEVE/ORACLES project (TA1).
+# ORACLES
 
-ZKPs allow data to be verified without revealing that data. For an overview of how they work, see articles under ["What is a zero-knowledge proof?"](https://zkp.science/)
+This repository contains code for the SIEVE/ORACLES TA1 project, whose goal is to create verifiable computations for legally, socially, or commercially relevant scenarios by constructing intermediate representations (IRs) that can be proved in zero-knowledge. 
 
-Our goal is to map legally, socially, or commercially relevant scenarios into intermedite representation (IR) that can be proved in zero-knowledge. Two platforms facilitate the interoperability of "frontend" (ie constraint generators) and "backend" (ie prover/verifier) libraries: zkinterface and wiztoolkit.
+The code executes computations and outputs them in the zkInterface intermediate representation format. This zkInterface output can then be used by a third party to verify that the computation was executed correctly, but without revealing the input data to the third party. We assume that the input data has not been modified maliciously. Input data integrity is beyond the scope of these proofs.
 
-## [WizToolKit](https://github.mit.edu/sieve-all/wiztoolkit)
-*Repos only available on the MIT Github and not accessible to the general public.*
+## Workflow
 
-## [zkinterface](https://github.com/QED-it/zkinterface)
+To construct a verifiable computation, the prover runs the code in this repository using their private data as input. 
 
-### Installation
-1) Install [Rust](https://www.rust-lang.org/tools/install) (also installs Cargo)       
-2) Switch to rust-nightly `rustup default nightly`       
-3) `source $HOME/.cargo/env`  
-4) `cargo install zkinterface`     
+The code outputs `.zkif` zkInterface files, which are then shared to verifiers. Verifiers can verify the computation using backends such as [zkinterface](https://github.com/QED-it/zkinterface/), [Bulletproofs](https://github.com/QED-it/bulletproofs), and [Bellman](https://github.com/QED-it/zkinterface-bellman).
 
-### Frontend (Trusted Party)
+Alternatively, the `.zkif` files can be converted into `.sieve` files in the SIEVE IR format using the [SIEVE IR Toolbox](https://github.mit.edu/sieve-all/zkinterface-sieve) on the MIT GitHub. The computation can also then be verified using the SIEVE IR Toolbox.
 
-<table>
-<tr>
-  <th>Library</th>
-  <th>Getting Started</th>
-</tr>
-<tr></tr>
+## Installing
 
-<tr>
-  <td><a href="https://zokrates.github.io/">Zokrates</a></td>
-  <td>
-  1) <code>curl -LSfs get.zokrat.es | sh</code> <br>  
-  2) MacOS: add <code>$HOME/.zokrates/bin</code> to your .bash_profile
-  </td>
-</tr>
-<tr></tr>
+First, install Python 3 and Rust.
 
-<tr>
-  <td><a href="https://github.com/meilof/pysnark">pySNARK</a></td>
-  <td>
-    <pre lang="csharp">
-    $ pip install git+https://github.com/meilof/pysnark
-    $ pip install flatbuffers
-    $ PYSNARK_BACKEND=zkinterface python aggregate_stats/pysnark/main.py
-    </pre>
-    This will generate a <code>computation.zkif</code> file containing the R1CS. To view the file, make sure you've installed Rust nightly (and Cargo) and have clone the
-    <a href="https://github.com/QED-it/zkinterface">zkinterface</a> library  
-    <pre>
-    $ cd zkinterface/rust/
-    $ cargo run explain path/to/computation.zkif
-    </pre>
-  </td>
-</tr>
-<tr></tr>
+Next, install the PySNARK library along with its requirements:
+```
+pip3 install git+https://github.com/meilof/pysnark.git@master
+pip3 install flatbuffers
+```
 
-</table>
+Install the `zkinterface` Rust library required by PySNARK:
+```
+git clone https://github.com/QED-it/zkinterface.git
+cargo +nightly install --path zkinterface/rust/
+```
 
-### Backend (Prover/Verifier)
-<table>
-<tr>
-  <th>Library</th>
-  <th>Getting Started</th>
-</tr>
-<tr></tr>
+Finally, clone the ORACLES repo:
+```
+git clone https://github.com/hicsail/ORACLES.git
+cd ORACLES
+```
 
-<tr>
-  <td><a href="">Bulletproof</a></td>
-  <td>
-    <pre lang="csharp">
-    $ git clone https://github.com/QED-it/bulletproofs.git
-    $ cd bulletproofs
-    $ cargo +nightly install --path .
-    </pre>
-    <i>3/8/21 build success</i><br><br>  
-    Make sure that the modulus in <code>main.py</code> is set correctly to the one required by Bulletproofs before generating the  <code>computation.zkif</code> file <br><br>
-    <pre lang="csharp">
-      $ zkif_bulletproofs prove < computation.zkif
-      Saved proof into bulletproofs-proof
-      $ zkif_bulletproofs verify < computation.zkif
-      Verifying proof in bulletproofs-proof
-    </pre>
-  </td>
-</tr>
-<tr></tr>
+## Running
 
-<tr>
-  <td><a href="https://docs.rs/bellman/0.8.0/bellman/">Bellman</a></td>
-  <td>
-    <pre lang="csharp">
-    $ git clone https://github.com/QED-it/zkinterface-bellman.git
-    $ cd zkinterface-bellman
-    $ cargo +nightly install --path .
-    </pre>
-    <i>3/8/21 build success</i><br><br>  
-    Make sure that the modulus in <code>main.py</code> is set correctly to the one required by Bellman before generating the  <code>computation.zkif</code> file
-    <br><br>
-    <pre lang="csharp">
-      $ zkif_bellman setup < computation.zkif
-      $ zkif_bellman prove < computation.zkif
-      $ zkif_bellman verify < computation.zkif
-      The proof is valid.
-    </pre>
-  </td>
-</tr>
+First, set up environment variables for PySNARK depending on what backend will be used during verification.
 
-</table>
+For zkInterface:
+```
+export PYSNARK_BACKEND=zkinterface
+```
+For Bulletproofs:
+```
+export PYSNARK_BACKEND=zkifbulletproofs
+```
+For Bellman:
+```
+export PYSNARK_BACKEND=zkifbellman
+```
 
+Finally, run the appropriate Python script:
+```
+cd aggregate_stats/pysnark
+python3 gpa.py
+```
 
-## Other Helpful Readings
+## Verifying
+
+### zkInterface
+
+To verify using zkInterface, first install download and zkInterface:
+```
+git clone https://github.com/QED-it/zkinterface.git
+cargo +nightly install --path zkinterface/rust/
+```
+
+Finally, navigate to the folder containing the `.zkif` files and run:
+```
+zkif validate
+zkif simulate
+```
+
+### Bulletproofs
+
+To verify using Bulletproofs, first install download and Bulletproofs:
+```
+git clone https://github.com/QED-it/bulletproofs.git
+cargo +nightly install --path bulletproofs/
+```
+
+Finally, navigate to the folder containing the `.zkif` files and run:
+```
+zkif_bulletproofs prove < computation.zkif
+zkif_bulletproofs verify < computation.zkif
+```
+
+### Bellman
+
+To verify using Bulletproofs, first install download and Bellman:
+```
+git clone https://github.com/QED-it/zkinterface-bellman.git
+cargo +nightly install --path zkinterface-bellman/
+```
+
+Finally, navigate to the folder containing the `.zkif` files and run:
+```
+zkif_bellman setup < computation.zkif
+zkif_bellman prove < computation.zkif
+zkif_bellman verify < computation.zkif
+```
+
+## Implementing Proofs
+
+We use the PySNARK library to convert a computation into a circuit that can be verified. The output circuit is an arithmetic circuit. Hence, our computation must consist of only arithmetic and logical operations. All inputs and variables must also be integers or booleans. Hence, we must convert all inputs into an integer representation.
+
+All inputs must then be converted into a PySNARK data type. `PubVal`s and `PubValFxp`s are public integers and floats respectively, while `PrivVal`s and `PrivValFxp`s are their private equivalents. We turn our secret inputs into private values and let the expected outputs be public values.
+
+We then pass the inputs into a function that executes our computation. We apply the `@snark` decorator to the function. The decorator automatically convert all integer inputs - including those in arrays - into `PubVal`s. Note that floats and contents of dictionaries are not converted. To use these data types, convert their contents into PySNARK data types manually. To make inputs private, construct `PrivVal`s out of them manually **outside the decorated function**. 
+
+Finally, use assertions to show that the computation reached the correct result.
+
+### Notes on implementation
+
+The circuit representing the computation is output as public knowledge. Hence, all operations in our computation should be applied to all inputs to prevent data being revealed. 
+
+For example, we can find the sum of two sets of inputs as follows:
+```
+set1 = [PrivVal(0), PrivVal(1)]
+set2 = [PrivVal(1), PrivVal(2), PrivVal(3)]
+
+sum1 = sum(set1)
+sum2 = sum(set2)
+```
+However, `sum1` will have an in-degree of 2, while the `sum2` gate will have an in-degree of 3. Hence, the verifier can find the number of inputs in each set.
+
+Alternatively, we can encode the second set by multiplying their value by 10. Then, we can modify the computation as follows:
+```
+inputs = [PrivVal(0), PrivVal(1), PrivVal(10), PrivVal(20), PrivVal(30)]
+
+sum1 = sum([x // 10 for x in inputs])
+sum2 = sum([x % 10 for x in inputs]])
+```
+Here, all operations are applied to all the inputs. This construction prevents the number of inputs in each set being leaked.
+
+### Other Notes
+
+Some floating point operations are not implemented. See https://github.com/meilof/pysnark/blob/master/pysnark/fixedpoint.py.
+
+For performance reasons, PySNARK's integers and floats are 16 bits long by default.
+If overflows occur, increase the number of bits as follows:
+```
+from pysnark import runtime
+runtime.bitlength = 20
+```
+
+## External Reading
+* [What is a zero-knowledge proof?](https://zkp.science/)
 * [R1CS](http://www.zeroknowledgeblog.com/index.php/the-pinocchio-protocol/r1cs)
