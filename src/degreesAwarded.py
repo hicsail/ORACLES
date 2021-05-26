@@ -30,7 +30,7 @@ def compute(data, results):
 if __name__ == '__main__':
     runtime.bitlength = 17
 
-    data = json.load(open('../data/Degrees Awarded/data.json', 'r'))
+    data = json.load(open('data/Degrees Awarded/data.json', 'r'))
     for category in data:
         students = []
         for student in data[category]:
@@ -39,7 +39,7 @@ if __name__ == '__main__':
                 num += 10
             students.append(PrivVal(num))
         data[category] = students
-    results = json.load(open('../data/Degrees Awarded/results.json', 'r'))
+    results = json.load(open('data/Degrees Awarded/results.json', 'r'))
 
     compute(data, results)
     print("Successfully verified average graduation rates!")

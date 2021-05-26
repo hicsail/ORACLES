@@ -50,17 +50,17 @@ def status_to_int(student):
 if __name__ == '__main__':
     runtime.bitlength = 17
 
-    data = json.load(open('../data/LFA/data_preLFA.json', 'r'))
+    data = json.load(open('data/LFA/data_preLFA.json', 'r'))
     undergrad_data = [PrivVal(status_to_int(x)) for x in data["UNDERGRADUATE DISTANCE EDUCATION STATUS"]]
     graduate_data = [PrivVal(status_to_int(x)) for x in data["GRADUATE DISTANCE EDUCATION STATUS"]]
     data = undergrad_data + graduate_data
 
-    lfa_data = json.load(open('../data/LFA/data_LFA.json', 'r'))
+    lfa_data = json.load(open('data/LFA/data_LFA.json', 'r'))
     undergrad_lfa_data = [PrivVal(status_to_int(x)) for x in lfa_data["UNDERGRADUATE DISTANCE EDUCATION STATUS"]]
     graduate_lfa_data = [PrivVal(status_to_int(x)) for x in lfa_data["GRADUATE DISTANCE EDUCATION STATUS"]]
     lfa_data = undergrad_data + graduate_data
 
-    results = json.load(open('../data/LFA/results.json', 'r'))
+    results = json.load(open('data/LFA/results.json', 'r'))
     
     compute(data, lfa_data, results)
     print("Successfully verified LFA data!")

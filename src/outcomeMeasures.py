@@ -50,8 +50,8 @@ def outcome_to_int(student):
     return 0
 
 if __name__ == '__main__':
-    data = json.load(open('../data/Education Outcomes/data.json', 'r'))
-    results = json.load(open('../data/Education Outcomes/results.json', 'r'))
+    data = json.load(open('data/Education Outcomes/data.json', 'r'))
+    results = json.load(open('data/Education Outcomes/results.json', 'r'))
     for category in data:
         # Construct inputs for Pell and non-Pell students
         # First 10 students of every category are Pell students

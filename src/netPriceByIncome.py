@@ -19,11 +19,11 @@ def compute(data, results):
             data[year][income].assert_eq(results[year][income])
 
 if __name__ == '__main__':
-    data = json.load(open('../data/Net Price by Income/data.json', 'r'))
+    data = json.load(open('data/Net Price by Income/data.json', 'r'))
     for year in data:
         for income in data[year]:
             data[year][income] = list(map(PrivVal, data[year][income]))
-    results = json.load(open ('../data/Net Price by Income/results.json', 'r'))
+    results = json.load(open ('data/Net Price by Income/results.json', 'r'))
 
     compute(data, results)
     print("Successfully verified price paid per income bracket!")
