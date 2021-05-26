@@ -61,7 +61,7 @@ python3 gpa.py
 
 ### zkInterface
 
-To verify using zkInterface, first install download and zkInterface:
+To verify using zkInterface, first download and install zkInterface:
 ```
 git clone https://github.com/QED-it/zkinterface.git
 cargo +nightly install --path zkinterface/rust/
@@ -75,7 +75,7 @@ zkif simulate
 
 ### Bulletproofs
 
-To verify using Bulletproofs, first install download and Bulletproofs:
+To verify using Bulletproofs, first download and install Bulletproofs:
 ```
 git clone https://github.com/QED-it/bulletproofs.git
 cargo +nightly install --path bulletproofs/
@@ -89,7 +89,7 @@ zkif_bulletproofs verify < computation.zkif
 
 ### Bellman
 
-To verify using Bulletproofs, first install download and Bellman:
+To verify using Bulletproofs, first download and install Bellman:
 ```
 git clone https://github.com/QED-it/zkinterface-bellman.git
 cargo +nightly install --path zkinterface-bellman/
@@ -100,6 +100,21 @@ Finally, navigate to the folder containing the `.zkif` files and run:
 zkif_bellman setup < computation.zkif
 zkif_bellman prove < computation.zkif
 zkif_bellman verify < computation.zkif
+```
+
+### SIEVE IR Toolbox
+
+To verify using the SIEVE IR Toolbox, first install and download the SIEVE IR Toolbox:
+```
+git clone git@github.mit.edu:sieve-all/zkinterface-sieve.git
+cargo +nightly install --path zkinterface-sieve/rust/
+```
+
+Finally, navigate to the folder containing the `.zkif` files and run:
+```
+zki_sieve zkif-to-ir
+zki_sieve validate
+zki_sieve simulate
 ```
 
 ## Implementing Proofs
