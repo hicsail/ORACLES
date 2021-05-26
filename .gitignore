@@ -138,7 +138,10 @@ dmypy.json
 cython_debug/
 
 # ZKIF output files
-computation.zkif
+*.zkif
+
+# SIEVE IR output files
+*.sieve
 
 # Bellman output files
 bellman-pk
