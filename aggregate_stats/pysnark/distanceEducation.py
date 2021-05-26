@@ -2,9 +2,6 @@ import json
 from pysnark import runtime
 from pysnark.runtime import snark, PrivVal, LinCombFxp
 
-# Witness: multi-table table database (D) for undergraduate and graduate students representing if they were enrolled in any distance education
-# Public knowledge: Public IPEDS Statistics that show the percentage of Undergraduate / Graduate students enrolled in distance education
-# Statement: the average distance education is calculated over the data with at least N people within the dataset for undergraduate and graduate students
 @snark 
 def compute(data, lfa_data, results):
     # Compute pre-LFA data

@@ -2,19 +2,6 @@ import json
 from pysnark import runtime
 from pysnark.runtime import snark, PrivVal, LinCombFxp
 
-# Witness: Multi-table database (D) for students pursuing Bachelor's degrees, 
-#          separated by their enrollment in either a 4-year, 6-year, or 8-year
-#          program and whether they began in Fall 2011 or Fall 2013
-# Public knowledge: Public IPEDS Statistics that shows the graduation rate 
-#                   percentages for all 4-year, 6-year, or 8-year program 
-#                   in Fall 2011 and Fall 2013
-# Statement: the average degrees awarded are calculated over the entire dataset
-# Limitations: PySnark's Fixed Point Value only stores 16 bits for integers, 
-#              therefore for the computations of a large number of rows, we 
-#              are unable to calculate the appropriate values, so we have scaled
-#              down the data in terms of 200 rows for each 4-year, 6-year, and 
-#              8-year program (100 students beginning in Fall 2011 and 100 
-#              who began in Fall 2013)
 @snark
 def compute(data, results):
     # Compute graduation rates by category

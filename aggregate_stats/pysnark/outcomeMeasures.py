@@ -1,14 +1,6 @@
 import json
 from pysnark.runtime import snark, PrivVal, LinCombFxp, ignore_errors
 
-# Witness:  multi-table database (D) for full-time and part-time first-time degree seekers and full-time and part-time non-first-time degree seekers
-#           measuring whether they received their bachelor's degree when entering in 2011-2012
-# Public knowledge: Public IPEDS Statistics that shows the percentages for each cohort, and seperates all students, students who received a Pell Grant, and students who
-#                   did not receive a pell grant
-# Statement: the average outcome measures are calculated over the data with at least N people within the dataset for all full-time first-time degree seekers, part-time 
-#            first-time degree seekers, full-time non-first-time degree seekers, and part-time non-first-time degree seekers
-# Limitations: PySnark's Fixed Point Value only stores 16 bits for integers, therefore for the computations of a large number of rows, we are unable to calculate the appropriate 
-#              values, so we have scaled down the data in terms of 100 for each category (10 pell grant recipients and 90 non-pell grant students)
 @snark
 def compute(data, results):
     # Compute outputs

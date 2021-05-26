@@ -16,7 +16,7 @@ Output: The percentage of COVID cases per age range
 
 ## degreesAwarded.py
 
-Computes the percentage of students at Boston University that graduated broken down by year of matriculation and by degree length. Checks that they match a published result.
+Computes the percentage of students at Boston University that graduated broken down by year of matriculation and by degree length. Checks that they match the [statistics published on IPEDS](https://nces.ed.gov/ipeds/datacenter/InstitutionProfile.aspx?unitid=164988) (See Retention and Graduation).
 
 Input: Database of students and their graduation status, broken down by degree length and start year
 
@@ -29,7 +29,7 @@ Students that started in 2013 have 10 added to their representation. Students st
 
 ## distanceEducation.py
 
-Computes the percentage of students at Boston University in distance education status before and after Boston University implemented the Learn from Anywhere modality. Checks that they match a published result.
+Computes the percentage of students at Boston University in distance education status before and after Boston University implemented the Learn from Anywhere modality. Checks that they match the [statistics published on IPEDS](https://nces.ed.gov/ipeds/datacenter/InstitutionProfile.aspx?unitid=164988) (See Enrollment).
 
 Input: A database of students and their distance education status pre-LFA, and a database of students and their distance education status post-LFA
 
@@ -45,7 +45,7 @@ Students not enrolled in distance education are represented by a 3.
 
 ## netPriceByIncome.py
 
-Computes the average net tuition paid by students per income bracket at Boston University and checks that they match a published result. 
+Computes the average net tuition paid by students per income bracket at Boston University. Checks that they match the [statistics published on IPEDS](https://nces.ed.gov/ipeds/datacenter/InstitutionProfile.aspx?unitid=164988) (See Net Price).
 
 Input: Database of students, their incomes, and their net tuition paid
 
@@ -53,7 +53,7 @@ Output: The average net tuition paid per income bracket
 
 ## outcomeMeasures.py
 
-Computes the graduation and transfer rates for students with and without Pell grants at Boston University broken down by matriculation year and study mode (Full time vs. Part time). Checks that they match a published result.
+Computes the graduation and transfer rates for students with and without Pell grants at Boston University broken down by matriculation year and study mode (Full time vs. Part time). Checks that they match the [statistics published on IPEDS](https://nces.ed.gov/ipeds/datacenter/InstitutionProfile.aspx?unitid=164988) (See Outcome Measures).
 
 Input: Database of students and their graduation or transfer status, broken down by matriculation year and study mode
 
