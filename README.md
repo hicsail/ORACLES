@@ -53,7 +53,7 @@ export PYSNARK_BACKEND=zkifbellman
 
 Finally, run the appropriate Python script:
 ```
-cd aggregate_stats/pysnark
+cd src 
 python3 gpa.py
 ```
 
