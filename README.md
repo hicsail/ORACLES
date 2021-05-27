@@ -50,6 +50,7 @@ For Bellman:
 ```
 export PYSNARK_BACKEND=zkifbellman
 ```
+For the SIEVE IR Toolbox, use any of the three setings above.
 
 Finally, run the appropriate Python script:
 ```
@@ -89,7 +90,7 @@ zkif_bulletproofs verify < computation.zkif
 
 ### Bellman
 
-To verify using Bulletproofs, first download and install Bellman:
+To verify using Bellman, first download and install Bellman:
 ```
 git clone https://github.com/QED-it/zkinterface-bellman.git
 cargo +nightly install --path zkinterface-bellman/
