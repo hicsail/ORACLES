@@ -2,7 +2,7 @@
 
 This repository contains code for the SIEVE/ORACLES TA1 project, whose goal is to create verifiable computations for legally, socially, or commercially relevant scenarios by constructing intermediate representations (IRs) that can be proved in zero-knowledge. 
 
-The code executes computations and outputs them in the zkInterface intermediate representation format. This zkInterface output can then be used by a third party to verify that the computation was executed correctly, but without revealing the input data to the third party. We assume that the input data has not been modified maliciously. Input data integrity is beyond the scope of these proofs.
+The code executes computations and outputs them in the zkInterface intermediate representation format. This zkInterface output can then be used by a third party to verify that the computation was executed correctly, but without revealing the input data to the third party. We assert that the input data has not been modified maliciously by hashing the input data and matching the hash to a known public hash of the input data. We assume that the publicly known hash was computed correctly. The correctness of the hash is beyond the scope of these proofs.
 
 ## Workflow
 
@@ -126,7 +126,7 @@ All inputs must then be converted into a PySNARK data type. `PubVal`s and `PubVa
 
 We then pass the inputs into a function that executes our computation. We apply the `@snark` decorator to the function. The decorator automatically convert all integer inputs - including those in arrays - into `PubVal`s. Note that floats and contents of dictionaries are not converted. To use these data types, convert their contents into PySNARK data types manually. To make inputs private, construct `PrivVal`s out of them manually **outside the decorated function**. 
 
-Finally, use assertions to show that the computation reached the correct result.
+Within the function, hash the input data and ensure that they match the publicly known hash. Next, execute the computation and check that the outputs match the expected outputs. Use assertion like `assert_eq()` to check that values are equal.
 
 ### Notes on implementation
 
@@ -153,9 +153,8 @@ Here, all operations are applied to all the inputs. This construction prevents t
 
 ### Other Notes
 
-Some floating point operations are not implemented. See https://github.com/meilof/pysnark/blob/master/pysnark/fixedpoint.py.
-
-For performance reasons, PySNARK's integers and floats are 16 bits long by default.
+During bitwise operations and comparing numbers, PySNARK assumes inputs are 16 bits long by default.
+This may cause problems due to overflow, especially with fixed point values where values are multiplied by `2 ** LinCombFxp.resolution` (8 by default).
 If overflows occur, increase the number of bits as follows:
 ```
 from pysnark import runtime
