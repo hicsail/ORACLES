@@ -1,70 +1,70 @@
 {
     "FULL-TIME, FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12": {
         "Pell": {
-            "Received Bachelor's": 0.80078125,
-            "Enrolled at same institution": 0.1015625,
-            "Enrolled at different insitution": 0.0
+            "Received Bachelor's": 0.796875,
+            "Enrolled at same institution": 0.09765625,
+            "Enrolled at different insitution": 0
         },
         "No Pell": {
-            "Received Bachelor's": 0.87890625,
-            "Enrolled at same institution": 0.078125,
-            "Enrolled at different insitution": 0.0
+            "Received Bachelor's": 0.875,
+            "Enrolled at same institution": 0.07421875,
+            "Enrolled at different insitution": 0
         },
         "All Students": {
-            "Received Bachelor's": 0.87109375,
+            "Received Bachelor's": 0.8671875,
             "Enrolled at same institution": 0.078125,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at different insitution": 0
         }
     },
     "PART-TIME, FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12": {
         "Pell": {
             "Received Bachelor's": 0.5,
-            "Enrolled at same institution": 0.0,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at same institution": 0,
+            "Enrolled at different insitution": 0
         },
         "No Pell": {
             "Received Bachelor's": 0.33203125,
-            "Enrolled at same institution": 0.0,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at same institution": 0,
+            "Enrolled at different insitution": 0
         },
         "All Students": {
-            "Received Bachelor's": 0.3515625,
-            "Enrolled at same institution": 0.0,
-            "Enrolled at different insitution": 0.0
+            "Received Bachelor's": 0.34765625,
+            "Enrolled at same institution": 0,
+            "Enrolled at different insitution": 0
         }
     },
     "FULL-TIME, NON-FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12": {
         "Pell": {
-            "Received Bachelor's": 0.80078125,
-            "Enrolled at same institution": 0.1015625,
-            "Enrolled at different insitution": 0.0
+            "Received Bachelor's": 0.796875,
+            "Enrolled at same institution": 0.09765625,
+            "Enrolled at different insitution": 0
         },
         "No Pell": {
             "Received Bachelor's": 0.85546875,
-            "Enrolled at same institution": 0.078125,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at same institution": 0.07421875,
+            "Enrolled at different insitution": 0
         },
         "All Students": {
-            "Received Bachelor's": 0.8515625,
+            "Received Bachelor's": 0.84765625,
             "Enrolled at same institution": 0.078125,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at different insitution": 0
         }
     },
     "PART-TIME, NON-FIRST-TIME DEGREE/CERTIFICATE-SEEKING UNDERGRADUATES WHO ENTERED IN 2011-12": {
         "Pell": {
             "Received Bachelor's": 0.5,
-            "Enrolled at same institution": 0.30078125,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at same institution": 0.296875,
+            "Enrolled at different insitution": 0
         },
         "No Pell": {
             "Received Bachelor's": 0.5,
             "Enrolled at same institution": 0.19921875,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at different insitution": 0
         },
         "All Students": {
             "Received Bachelor's": 0.5,
-            "Enrolled at same institution": 0.2109375,
-            "Enrolled at different insitution": 0.0
+            "Enrolled at same institution": 0.20703125,
+            "Enrolled at different insitution": 0
         }
     }
 }

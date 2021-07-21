@@ -1,14 +1,14 @@
 {
     "4-year": {
-        "Began in 2011": 0.40625,
-        "Began in 2013": 0.421875
+        "Began in 2011": 40.5,
+        "Began in 2013": 42
     },
     "6-year": {
-        "Began in 2011": 0.43359375,
-        "Began in 2013": 0.44140625
+        "Began in 2011": 43.5,
+        "Began in 2013": 44
     },
     "8-year": {
-        "Began in 2011": 0.87890625,
+        "Began in 2011": 88,
         "Began in 2013": 0
     }
 }

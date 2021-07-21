@@ -1,9 +1,15 @@
 import json
-from pysnark import runtime
-from pysnark.runtime import snark, PrivVal, LinCombFxp
+from common import flatten, count_ops
+from pysnark.runtime import snark, PrivVal
+from pysnark.fixedpoint import LinCombFxp
+from pysnark.poseidon_hash import poseidon_hash
 
 @snark 
-def compute(data, lfa_data, results):
+def compute(data, lfa_data, results, correct_hash):
+    # Compute commitment
+    hashed_data = poseidon_hash(flatten(data + lfa_data))
+    [x.assert_eq(y) for (x,y) in zip(hashed_data, correct_hash)]
+
     # Compute pre-LFA data
     output = {
         "Pre-COVID": {},
@@ -12,9 +18,9 @@ def compute(data, lfa_data, results):
 
     num_students = PrivVal(len(data))
 
-    only_distance = LinCombFxp.fromvar(sum([i == 1 for i in data]), True)
-    some_distance = LinCombFxp.fromvar(sum([i == 2 for i in data]), True)
-    no_distance = LinCombFxp.fromvar(sum([i == 3 for i in data]), True)
+    only_distance = LinCombFxp(sum([i == 1 for i in data]))
+    some_distance = LinCombFxp(sum([i == 2 for i in data]))
+    no_distance = LinCombFxp(sum([i == 3 for i in data]))
     
     output["Pre-COVID"] = {
         "Only Distance Education": only_distance / num_students,
@@ -24,9 +30,9 @@ def compute(data, lfa_data, results):
     
     num_lfa_students = PrivVal(len(data))
 
-    lfa_only_distance = LinCombFxp.fromvar(sum([i == 1 for i in lfa_data]), True)
-    lfa_some_distance = LinCombFxp.fromvar(sum([i == 2 for i in lfa_data]), True)
-    lfa_no_distance = LinCombFxp.fromvar(sum([i == 3 for i in lfa_data]), True)
+    lfa_only_distance = LinCombFxp(sum([i == 1 for i in lfa_data]))
+    lfa_some_distance = LinCombFxp(sum([i == 2 for i in lfa_data]))
+    lfa_no_distance = LinCombFxp(sum([i == 3 for i in lfa_data]))
     
     output["Post-COVID"] = {
         "Only Distance Education": lfa_only_distance / num_lfa_students,
@@ -48,8 +54,6 @@ def status_to_int(student):
     return 0
 
 if __name__ == '__main__':
-    runtime.bitlength = 17
-
     data = json.load(open('data/LFA/data_preLFA.json', 'r'))
     undergrad_data = [PrivVal(status_to_int(x)) for x in data["UNDERGRADUATE DISTANCE EDUCATION STATUS"]]
     graduate_data = [PrivVal(status_to_int(x)) for x in data["GRADUATE DISTANCE EDUCATION STATUS"]]
@@ -61,6 +65,8 @@ if __name__ == '__main__':
     lfa_data = undergrad_data + graduate_data
 
     results = json.load(open('data/LFA/results.json', 'r'))
+    correct_hash = json.load(open('data/LFA/hash.json', 'r'))
     
-    compute(data, lfa_data, results)
+    compute(data, lfa_data, results, correct_hash)
+    # count_ops(lambda w,x,y,z: compute(w,x,y,z), (data, lfa_data, results, correct_hash))
     print("Successfully verified LFA data!")
