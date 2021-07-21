@@ -1,10 +1,602 @@
-{
-    "0-19": 6,
-    "20-29": 15,
-    "30-39": 15,
-    "40-49": 14,
-    "50-59": 16,
-    "60-69": 13,
-    "70-79": 8,
-    "80+": 13
-}
+[
+    {
+        "name": "John Doe",
+        "age": 28,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 91,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 57,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 23,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 28,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 68,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 54,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 61,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 39,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 26,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 38,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 37,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 68,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 30,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 39,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 31,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 47,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 46,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 41,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 49,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 32,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 38,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 34,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 37,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 30,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 55,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 44,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 32,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 21,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 37,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 10,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 13,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 58,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 37,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 36,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 31,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 29,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 65,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 87,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 77,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 47,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 19,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 18,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 61,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 64,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 70,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 33,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 40,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 50,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 29,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 27,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 32,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 36,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 53,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 51,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 49,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 48,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 79,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 15,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 77,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 32,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 44,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 20,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 92,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 19,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 81,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 58,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 35,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 70,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 40,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 64,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 36,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 32,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 81,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 11,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 19,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 25,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 9,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 32,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 44,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 20,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 92,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 19,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 81,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 58,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 35,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 17,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 27,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 47,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 34,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 36,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 42,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 49,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 29,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 38,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 48,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 52,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 59,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 56,
+        "phone": 6171231234,
+        "covid": true
+    },
+    {
+        "name": "John Doe",
+        "age": 53,
+        "phone": 6171231234,
+        "covid": true
+    }
+]

@@ -16,7 +16,7 @@ Input: The number of COVID cases in Massachussets broken down by age range
 
 Output: The percentage of COVID cases per age range
 
-Cost: 1220 constraints with commitment checks, 16 constraints without commitment checks
+Cost: 38400 constraints with commitment checks, 27996 constraints without commitment checks
 
 ## degreesAwarded.py
 
