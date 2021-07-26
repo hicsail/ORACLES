@@ -6,12 +6,12 @@ from pysnark.poseidon_hash import poseidon_hash
 @snark
 def compute(data, results, correct_hash):
     # Compute commitment
-    hashed_data = poseidon_hash(flatten(data))
+    hashed_data = poseidon_hash(data)
     [x.assert_eq(y) for (x,y) in zip(hashed_data, correct_hash)]
 
     # Compute GPA
     total = sum(data)
-    num_students = PrivVal(len(data))
+    num_students = len(data)
     gpa = total / num_students
 
     # Assert GPAs match

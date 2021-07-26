@@ -15,7 +15,7 @@ def compute(data, results, correct_hash):
     for category in data:
         num_pell = sum([i >= 10 for i in data[category]])
         num_non_pell = sum([i < 10 for i in data[category]])
-        num_all = num_pell + num_non_pell
+        num_all = len(data[category])
 
         received_bachelors_pell = LinCombFxp(sum([i == 11 for i in data[category]]))
         different_institution_pell = LinCombFxp(sum([i == 12 for i in data[category]]))

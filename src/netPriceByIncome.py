@@ -16,7 +16,7 @@ def compute(data, results, correct_hash):
         for income in data[year]:
             year_data = data[year][income]
             total = sum(year_data)
-            length = PrivVal(len(year_data))
+            length = len(year_data)
             output[year][income] = total / length
 
     # Check equality
