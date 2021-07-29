@@ -1,9 +1,14 @@
 import json
 from common import flatten, count_ops
 from pysnark import runtime
-from pysnark.runtime import snark, PrivVal, benchmark
+from pysnark.runtime import snark, PrivVal, LinComb, benchmark
 from pysnark.fixedpoint import LinCombFxp
 from pysnark.poseidon_hash import poseidon_hash
+
+DEGREE_LENGTHS = [4, 6, 8]
+LENGTH_STRINGS = ["4-year", "6-year", "8-year"]
+START_YEARS = [2011, 2013]
+START_STRINGS = ["Began in 2011", "Began in 2013"]
 
 @snark
 def compute(data, results, correct_hash):
@@ -11,16 +16,15 @@ def compute(data, results, correct_hash):
     hashed_data = poseidon_hash(flatten(data))
     [x.assert_eq(y) for (x,y) in zip(hashed_data, correct_hash)]
 
-    # Constants
-    degree_lengths = [4, 6, 8]
-    start_years = [2011, 2013]
-
     # Construct output dictionary in expected result format
-    output = {(str(y) + "-year"):{("Began in " + str(x)):0 for x in start_years} for y in degree_lengths}
+    output = {y:{x:LinComb.ZERO for x in START_STRINGS} for y in LENGTH_STRINGS}
 
     # Populate output dictionary with graduation rates
-    for degree_length in degree_lengths:
-        for start_year in start_years:
+    for i in range(len(DEGREE_LENGTHS)):
+        for j in range(len(START_YEARS)):
+            degree_length = DEGREE_LENGTHS[i]
+            start_year = START_YEARS[j]
+
             # Construct integer representations for grads and non-grads
             grad_repr = convert_to_int(True, start_year, degree_length)
             non_grad_repr = convert_to_int(False, start_year, degree_length)
@@ -31,13 +35,12 @@ def compute(data, results, correct_hash):
             total = grads + non_grads
 
             grad_rate = grads / (total + (total == 0))
-
-            output[str(degree_length) + "-year"]["Began in " + str(start_year)] = grad_rate
+            output[LENGTH_STRINGS[i]][START_STRINGS[j]] = grad_rate
 
     # Assert results are correct
-    for category in results:
-        output[category]["Began in 2011"].assert_eq(results[category]["Began in 2011"])
-        output[category]["Began in 2013"].assert_eq(results[category]["Began in 2013"])
+    for degree_length in results:
+        for start_year in results[degree_length]:
+            output[degree_length][start_year].assert_eq(results[degree_length][start_year])
 
 def convert_to_int(graduated, start_year, degree_length):
     student_repr = degree_length * 1000 
@@ -52,7 +55,7 @@ if __name__ == '__main__':
     # Create integer representation of data
     data = [convert_to_int(x["Graduated"], x["Began"], int(x["Degree Type"][0])) for x in data]
     # Construct private witness variables
-    data = [PrivVal(x) for x in data]
+    data = list(map(PrivVal, data))
 
     results = json.load(open('data/Degrees Awarded/results.json', 'r'))
     correct_hash = json.load(open('data/Degrees Awarded/hash.json', 'r'))

@@ -1,2502 +1,502 @@
 [
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": true
+        "Degree Type": "4-year",
+        "Began": 2013,
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": true
+        "Degree Type": "4-year",
+        "Began": 2013,
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
-        "Graduated": true
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": true
+        "Degree Type": "4-year",
+        "Began": 2013,
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
-        "Graduated": true
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
-        "Graduated": true
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": true
+        "Degree Type": "6-year",
+        "Began": 2013,
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
-        "Graduated": true
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
-        "Graduated": true
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "4-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2011,
+        "Degree Type": "6-year",
+        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2011,
         "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2011,
-        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2011,
         "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "8-year",
         "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
+        "Degree Type": "8-year",
+        "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
+        "Degree Type": "6-year",
+        "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
+        "Degree Type": "6-year",
+        "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2013,
-        "Graduated": true
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
+        "Degree Type": "4-year",
+        "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
+        "Degree Type": "6-year",
+        "Began": 2011,
+        "Graduated": false
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
+        "Degree Type": "4-year",
+        "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
+        "Degree Type": "8-year",
+        "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
-        "Began": 2013,
+        "Degree Type": "8-year",
+        "Began": 2011,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "6-year",
         "Began": 2013,
         "Graduated": true
     },
     {
-        "Degree Type": "4 Year",
+        "Degree Type": "4-year",
         "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "4 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "6 Year",
-        "Began": 2013,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": true
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
-        "Graduated": false
-    },
-    {
-        "Degree Type": "8 Year",
-        "Began": 2011,
         "Graduated": false
     }
 ]
