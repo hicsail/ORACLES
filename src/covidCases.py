@@ -26,7 +26,7 @@ def compute(data, results, correct_hash):
     
     percentage_per_category = {x:data[x] / total_cases for x in data}
 
-    # Check output
+    # Verify result is correct
     for x in data:
         percentage_per_category[x].assert_eq(results[x])
 

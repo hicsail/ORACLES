@@ -10,12 +10,13 @@ def compute(pre_lfa_data, lfa_data, results, correct_hash):
     hashed_data = poseidon_hash(flatten(pre_lfa_data + lfa_data))
     [x.assert_eq(y) for (x,y) in zip(hashed_data, correct_hash)]
 
-    # Compute pre-LFA data
+    # Construct output dictionary
     output = {
         "Pre-COVID": {},
         "Post-COVID": {}
     }
 
+    # Compute pre-LFA data
     num_students = len(pre_lfa_data)
 
     only_distance = LinCombFxp(sum([i == 1 for i in pre_lfa_data]))
@@ -28,6 +29,7 @@ def compute(pre_lfa_data, lfa_data, results, correct_hash):
         "No Distance": no_distance / num_students
     }
     
+    # Compute post-LFA data
     num_lfa_students = len(lfa_data)
 
     lfa_only_distance = LinCombFxp(sum([i == 1 for i in lfa_data]))
@@ -40,6 +42,7 @@ def compute(pre_lfa_data, lfa_data, results, correct_hash):
         "No Distance": lfa_no_distance / num_lfa_students
     }
 
+    # Verify result is correct
     for time_period in results:
         for distance_status in results[time_period]:
             output[time_period][distance_status].assert_eq(results[time_period][distance_status])

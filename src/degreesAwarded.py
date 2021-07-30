@@ -37,7 +37,7 @@ def compute(data, results, correct_hash):
             grad_rate = grads / (total + (total == 0))
             output[LENGTH_STRINGS[i]][START_STRINGS[j]] = grad_rate
 
-    # Assert results are correct
+    # Verify result is correct
     for degree_length in results:
         for start_year in results[degree_length]:
             output[degree_length][start_year].assert_eq(results[degree_length][start_year])

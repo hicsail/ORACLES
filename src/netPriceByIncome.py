@@ -17,7 +17,7 @@ def compute(data, results, correct_hash):
     for year in data:
         output[year] = {}
 
-        # Compute average net tuition for all income brackets except last
+        # Compute average net tuition for all income brackets except $110,001+
         for i in range(len(INCOME_BRACKETS) - 1):
             (bracket_min, bracket_max) = INCOME_BRACKETS[i]
 
@@ -39,13 +39,13 @@ def compute(data, results, correct_hash):
         average_net_tuition = total / (num_students + (num_students == 0))
         output[year][BRACKET_STRINGS[4]] = average_net_tuition
 
-    # Check equality
+    # Verify result is correct
     for year in results:
         for income in results[year]:
             output[year][income].assert_eq(results[year][income])
 
 if __name__ == '__main__':
-    runtime.bitlength = 20
+    runtime.bitlength = 19
 
     raw_data = json.load(open('data/Net Price by Income/data.json', 'r'))
 

@@ -29,7 +29,7 @@ def compute(data, results, correct_hash):
         full_time = CATEGORIES[i]["Full Time"]
         first_time = CATEGORIES[i]["First Time"]
 
-        # Compute Pell student statistics
+        # Compute Pell student counts
         received_bachelors_pell_repr = convert_to_int(1, True, first_time, full_time)
         different_institution_pell_repr = convert_to_int(2, True, first_time, full_time)
         same_institution_pell_repr = convert_to_int(3, True, first_time, full_time)
@@ -40,7 +40,7 @@ def compute(data, results, correct_hash):
         same_institution_pell = LinCombFxp(sum([i == same_institution_pell_repr for i in data]))
         other_pell = LinCombFxp(sum([i == other_pell_repr for i in data]))
 
-        # Compute non-Pell student statistics
+        # Compute non-Pell student counts
         received_bachelors_non_pell_repr = convert_to_int(1, False, first_time, full_time)
         different_institution_non_pell_repr = convert_to_int(2, False, first_time, full_time)
         same_institution_non_pell_repr = convert_to_int(3, False, first_time, full_time)
@@ -56,6 +56,7 @@ def compute(data, results, correct_hash):
         num_non_pell = received_bachelors_non_pell + different_institution_non_pell + same_institution_non_pell + other_non_pell
         num_all = num_pell + num_non_pell
 
+        # Compute statistics
         output[CATEGORY_STRING[i]] = {
             "Pell": {
                 "Received Bachelor's": received_bachelors_pell / num_pell, 
@@ -73,6 +74,7 @@ def compute(data, results, correct_hash):
                 "Enrolled at different insitution": (different_institution_pell + different_institution_non_pell) / num_all
             }}
 
+    # Verify result is correct
     for category in results:
         for student_type in results[category]:
             for outcome in results[category][student_type]:

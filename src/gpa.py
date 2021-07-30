@@ -14,7 +14,7 @@ def compute(data, results, correct_hash):
     num_students = len(data)
     gpa = total / num_students
 
-    # Assert GPAs match
+    # Verify result is correct
     gpa.assert_eq(results)
 
 if __name__ == "__main__":
