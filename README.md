@@ -72,7 +72,7 @@ Finally, navigate to the folder containing the `computation.zkif` file and run:
 ```
 zki_sieve zkif-to-ir
 zki_sieve validate
-zki_sieve simulate
+zki_sieve evaluate
 ```
 
 ## Implementing Proofs
